@@ -4,20 +4,25 @@
 public class RomanNumeral {
 
     public static int convert(String input){
-        if(input.equals("I"))
-            return 1;
-        else if (input.equals("III"))
-            return 3;
-        else if (input.equals("VI"))
-            return 6;
-        else if (input.equals("IV"))
-            return 4;
-        else if (input.equals("XVI"))
-            return 16;
-        else if (input.equals("XIV"))
-            return 14;
-        else
-            return 0;
+
+        int value = 0;
+        for(int i = input.length() - 1; i >= 0; i-- ){
+            switch(input.charAt(i)){
+                case 'I':
+                    value += 1;
+                    break;
+                case 'V':
+                    value += 5;
+                    break;
+                case 'X':
+                    value += 10;
+                    break;
+                default:
+                    return -1;
+            }
+        }
+
+        return value;
     }
 
 }
