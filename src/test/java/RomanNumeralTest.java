@@ -19,26 +19,5 @@ public class RomanNumeralTest {
         assert(RomanNumeral.convert("VI") == 6);
     }
 
-    @Test
-     public void testConvertEndWithV(){
-        assert(RomanNumeral.convert("IV") == 4);
-    }
-
-    @Test
-    public void testConvert3CharV(){
-        assert(RomanNumeral.convert("XVI") == 16);
-    }
-
-       @Test
-    public void testConvert3CharVEnd(){
-        assert(RomanNumeral.convert("XIV") == 14);
-    }
-
-    @Test
-    public void testConvertMMiddle(){
-        assert(RomanNumeral.convert("MV") == 1005);
-    }
-
-
 
 }
